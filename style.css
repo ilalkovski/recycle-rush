@@ -22,6 +22,8 @@ body {
   /* On phones 100vh includes the area behind the browser's address/tool
      bars; dvh is only the visible part, so the bins aren't hidden. */
   min-height: 100dvh;
+  /* Measured in js/game.js; more reliable than dvh on iPhone Chrome. */
+  min-height: var(--app-height, 100dvh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +34,7 @@ body {
   max-width: 480px;
   min-height: 100vh;
   min-height: 100dvh;
+  min-height: var(--app-height, 100dvh);
   /* Keep content clear of the iPhone home indicator. */
   padding-bottom: env(safe-area-inset-bottom);
   background: var(--brand-bg);
@@ -41,6 +44,9 @@ body {
   overflow: hidden;
   position: relative;
 }
+/* While playing, lock the game to exactly the visible height so the bins
+   always sit at the bottom of the screen; the item area shrinks to fit. */
+#app:has(#screen-play.active) { height: var(--app-height, 100dvh); }
 
 .screen { display: none; flex-direction: column; flex: 1; padding: 24px; text-align: center; }
 .screen.active { display: flex; }
@@ -134,7 +140,7 @@ h1 { font-size: 28px; margin: 8px 0 4px; color: var(--brand); }
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 180px;
+  min-height: 0;
 }
 
 .item-card {
@@ -157,8 +163,9 @@ h1 { font-size: 28px; margin: 8px 0 4px; color: var(--brand); }
 .item-card.dropped { opacity: 0; transition: opacity 0.15s ease; }
 @keyframes pop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-.item-emoji { font-size: 90px; line-height: 1; }
-.item-card img { width: 120px; height: 120px; object-fit: contain; }
+/* Shrink the item on short screens so everything fits above the bins. */
+.item-emoji { font-size: clamp(56px, 12dvh, 90px); line-height: 1; }
+.item-card img { width: clamp(72px, 16dvh, 120px); height: clamp(72px, 16dvh, 120px); object-fit: contain; }
 .item-name { font-size: 18px; font-weight: 700; color: var(--text); }
 
 .pause-btn {
@@ -233,7 +240,7 @@ h1 { font-size: 28px; margin: 8px 0 4px; color: var(--brand); }
   background: white;
   border: 3px solid var(--bin-color);
   border-radius: 14px;
-  padding: 12px 4px;
+  padding: clamp(6px, 1.5dvh, 12px) 4px;
   min-width: 0;
   display: flex;
   flex-direction: column;

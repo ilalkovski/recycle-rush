@@ -120,7 +120,20 @@ function binIconHTML(bin, size) {
 function showScreen(name) {
   Object.values(screens).forEach((s) => s.classList.remove("active"));
   screens[name].classList.add("active");
+  // The start screen can be scrolled; start each screen from the top so
+  // the play screen isn't shown partly scrolled off.
+  window.scrollTo(0, 0);
 }
+
+// Mobile browsers (especially Chrome on iPhone) don't report the visible
+// height reliably in CSS, so measure it and expose it as --app-height.
+function updateAppHeight() {
+  const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  document.documentElement.style.setProperty("--app-height", `${height}px`);
+}
+window.addEventListener("resize", updateAppHeight);
+if (window.visualViewport) window.visualViewport.addEventListener("resize", updateAppHeight);
+updateAppHeight();
 
 function updateScore(delta) {
   // Never let the total score drop below zero.
