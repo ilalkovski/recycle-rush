@@ -19,6 +19,9 @@ body {
   font-family: "Segoe UI", Verdana, Arial, sans-serif;
   background: linear-gradient(160deg, var(--brand-bg) 0%, var(--brand-tint) 100%);
   min-height: 100vh;
+  /* On phones 100vh includes the area behind the browser's address/tool
+     bars; dvh is only the visible part, so the bins aren't hidden. */
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +31,9 @@ body {
   width: 100%;
   max-width: 480px;
   min-height: 100vh;
+  min-height: 100dvh;
+  /* Keep content clear of the iPhone home indicator. */
+  padding-bottom: env(safe-area-inset-bottom);
   background: var(--brand-bg);
   box-shadow: 0 10px 40px rgba(0,0,0,0.12);
   display: flex;
