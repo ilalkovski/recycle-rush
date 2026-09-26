@@ -129,11 +129,21 @@ const Sound = (() => {
 
   // Browsers block audio until the player interacts with the page, so
   // music requested on page load actually starts on the first tap/click/key.
-  const UNLOCK_EVENTS = ["pointerdown", "touchstart", "keydown"];
+  // On touch screens only touchend/pointerup/click count as a real gesture
+  // (touchstart could still turn into a scroll), so listen for those too.
+  const UNLOCK_EVENTS = ["pointerdown", "pointerup", "touchstart", "touchend", "click", "keydown"];
   function unlock() {
-    if (ctx && ctx.state === "suspended") ctx.resume();
+    if (ctx && ctx.state !== "running") ctx.resume();
     if (musicWanted && !muted && musicEl && musicEl.paused) musicEl.play().catch(() => {});
-    UNLOCK_EVENTS.forEach((evt) => document.removeEventListener(evt, unlock));
+
+    // Keep listening until audio is actually running: an early event that
+    // the browser doesn't accept as a gesture must not end the unlock.
+    // (resume() is async, so this usually passes on the following event.)
+    const ctxReady = !ctx || ctx.state === "running";
+    const fileReady = !musicEl || !musicEl.paused || !musicWanted || muted;
+    if (ctxReady && fileReady) {
+      UNLOCK_EVENTS.forEach((evt) => document.removeEventListener(evt, unlock));
+    }
   }
   UNLOCK_EVENTS.forEach((evt) => document.addEventListener(evt, unlock));
 
