@@ -18,11 +18,11 @@
 // ~200x200px) into assets/bins/ and set image: "assets/bins/yourfile.png"
 // "label" has one entry per language (see section 6).
 const BIN_TYPES = [
-  { id: "plastic", label: { mk: "Пластика", en: "Plastic" }, color: "#2f9df4", image: null },
-  { id: "glass", label: { mk: "Стакло", en: "Glass" }, color: "#2ecc71", image: null },
-  { id: "metal", label: { mk: "Метал", en: "Metal" }, color: "#9aa5b1", image: null },
-  { id: "paper", label: { mk: "Хартија", en: "Paper" }, color: "#f5a623", image: null },
-  { id: "organic", label: { mk: "Органски", en: "Organic" }, color: "#8d5524", image: null },
+  { id: "plastic", label: { mk: "Пластика", en: "Plastic" }, color: "#2f9df4", image: "assets/bins/plastic.png" },
+  { id: "glass", label: { mk: "Стакло", en: "Glass" }, color: "#2ecc71", image: "assets/bins/glass.png" },
+  { id: "metal", label: { mk: "Метал", en: "Metal" }, color: "#9aa5b1", image: "assets/bins/metal.png" },
+  { id: "paper", label: { mk: "Хартија", en: "Paper" }, color: "#f5a623", image: "assets/bins/paper.png" },
+  { id: "organic", label: { mk: "Органски", en: "Organic" }, color: "#8d5524", image: "assets/bins/organic.png" },
 ];
 
 // ---------- 2. GARBAGE ITEMS ----------
