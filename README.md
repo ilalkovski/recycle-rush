@@ -128,3 +128,91 @@ per browser and device. To reset it, run this in the browser console:
 ```js
 localStorage.removeItem("recycleRush.bestScore")
 ```
+
+## Image credits
+Item photos from Wikimedia Commons, cut out and resized for the game:
+
+- `assets/items/straws.png` — "Eight drinking straws" by Horia Varlan,
+  [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Eight_drinking_straws_(4273846588).jpg))
+- `assets/items/plastic_cup.png` — "Party red plastic cup" by Lenny Maidana
+  (edited by Vitor Perrut), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Party_red_plastic_cup.png))
+- `assets/items/plastic_bag.png` — "Black plastic bag on white counter" by 999real, CC0
+  ([source](https://commons.wikimedia.org/wiki/File:Black_plastic_bag_on_white_counter.jpg))
+- `assets/items/bottle_cap.png` — "Green bottle cap" by XCNXMONSTERTRUCK20, CC0
+  ([source](https://commons.wikimedia.org/wiki/File:Green_bottle_cap.jpg))
+- `assets/items/detergent_bottle.png` — "Liquid detergent" by Mk2010,
+  [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Liquid_detergent.JPG))
+- `assets/items/glass_bottle.png` — "Acqua Panna mineral water in a glass bottle" by Smuconlaw,
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Acqua_Panna_mineral_water_in_a_glass_bottle_-_20140408.jpg))
+- `assets/items/broken_glass.png` — "Broken bottle" by kallerna,
+  [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Broken_bottle.jpg))
+- `assets/items/perfume_bottle.png` — "CHANEL No5 parfum" by arz, public domain
+  ([source](https://commons.wikimedia.org/wiki/File:CHANEL_No5_parfum.jpg))
+- `assets/items/pickle_jar.png` — "Pickled cucumber 2" by Tiia Monto,
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Pickled_cucumber_2.jpg))
+- `assets/items/jam_jar.png` — "Jam Kruipbraam" by pdreijnders,
+  [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Jam_Kruipbraam.jpeg))
+- `assets/items/juice_bottle.png` — "Bottle of grape juice" by Oyp,
+  [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Bottle_of_grape_juice.jpeg))
+- `assets/items/aluminum_foil.png` — "A sample of aluminium foil on a piece of paper" by Vitaium, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:A_sample_of_aluminium_foil_on_a_piece_of_paper.jpg))
+- `assets/items/apple_core.png` — "Core" by retewphoto, CC0
+  ([source](https://www.flickr.com/photos/89287075@N04/8152898820))
+- `assets/items/book.png` — "Books: Maya Cosmos" by planeta, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/19047782@N00/5807979751))
+- `assets/items/bread_crust.png` — "Heel" by drewgstephens, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0)
+  ([source](https://www.flickr.com/photos/22809317@N04/3366775895))
+- `assets/items/cardboard_box.png` — "Box.agr" by ArnoldReinhold, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Box.agr.jpg))
+- `assets/items/carrot_peels.png` — "Peeling carrots" by Afifa Afrin, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Peeling_carrots.jpg))
+- `assets/items/cereal_box.png` — "Retro Cornflakes Box." by Rex Roof, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/18199354@N00/3028044461))
+- `assets/items/coffee_grounds.png` — "coffee_grounds" by How can I recycle this, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/87481332@N00/161604527))
+- `assets/items/egg_carton.png` — "Country eggs" by Andrei!, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0)
+  ([source](https://www.flickr.com/photos/29465285@N00/4158912568))
+- `assets/items/eggshells.png` — "Crushed eggshells in a pot. DIY fertilizer" by Ivan Radic, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/26344495@N05/50262747381))
+- `assets/items/envelope.png` — "old papers" by Joanna Bourne, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/66992990@N00/6773474225))
+- `assets/items/glass_jar.png` — "Empty Clear Jar (51330638811)" by Alabama Extension, CC0
+  ([source](https://commons.wikimedia.org/wiki/File:Empty_Clear_Jar_(51330638811).jpg))
+- `assets/items/grass_clippings.png` — "pile of grass" by peretzpup, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0)
+  ([source](https://www.flickr.com/photos/60436643@N00/1793986790))
+- `assets/items/honey_jar.png` — "Antique Glass Honey Jar With Rusted Metal Cap (31009798197)" by Cindy Shebley, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Antique_Glass_Honey_Jar_With_Rusted_Metal_Cap_(31009798197).jpg))
+- `assets/items/leftover_food.png` — "Half-eaten vietnamese sandwich" by karen_neoh, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/50266725@N02/6145759251))
+- `assets/items/magazine.png` — "Kazoo Magazine, Issue 24" by BJCHK, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Kazoo_Magazine,_Issue_24.jpg))
+- `assets/items/metal_spoon.png` — "Cuillère pour bébé Art Déco" by Lionel Allorge, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Cuill%C3%A8re_pour_b%C3%A9b%C3%A9_Art_D%C3%A9co.jpg))
+- `assets/items/nail.png` — "Nail 01" by Shams948, CC0
+  ([source](https://commons.wikimedia.org/wiki/File:Nail_01.jpg))
+- `assets/items/newspaper.png` — "Folded Newspaper" by abdillaamy, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
+  ([source](https://sketchfab.com/3d-models/4fc14ea5129b4ea3b34a22844a6f1b3f))
+- `assets/items/old_keys.png` — "Two keys and key ring" by themet, CC0
+  ([source](https://www.rawpixel.com/image/8285889/two-keys-and-key-ring))
+- `assets/items/orange_peel.png` — "Five Spiral Strips Orange Peeling" by fdecomite, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/21649179@N00/17143365469))
+- `assets/items/plastic_bucket.png` — "The Childrens Museum of Indianapolis - Sandbox and Beach Toys" by unknown author, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Sandbox_and_Beach_Toys.jpg))
+- `assets/items/printer_paper.png` — "Wrinkled paper" by Turinboy, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Wrinkled_paper.jpg))
+- `assets/items/safety_pin.png` — "Safety Pin" by Haragayato, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Safety_Pin.jpg))
+- `assets/items/shampoo_bottle.png` — "Dove shampoo bottle" by Ranjima np, CC0
+  ([source](https://commons.wikimedia.org/wiki/File:Dove_shampoo_bottle.jpg))
+- `assets/items/toilet_paper_roll.png` — "code 71604592781" by uair01, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+  ([source](https://www.flickr.com/photos/56759497@N00/6294764262))
+- `assets/items/milk_bottle.png` — "Milk-bottle" by FiveRings (talk), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+  ([source](https://commons.wikimedia.org/wiki/File:Milk-bottle.jpg))
