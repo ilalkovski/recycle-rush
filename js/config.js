@@ -12,82 +12,86 @@
 // ---------- 1. BIN / CATEGORY TYPES ----------
 // Add or remove categories here. "color" is used for the bin's theme
 // color (border + the built-in can icon).
-//   - image: a path to a picture of the bin, e.g. "assets/bins/plastic.png"
+//   - image: a path to a picture of the bin, e.g. "assets/bins/plastic.webp"
 // If "image" is set it is used instead of the built-in colored can icon.
-// TO ADD YOUR OWN ART: drop a PNG (transparent background works best,
-// ~200x200px) into assets/bins/ and set image: "assets/bins/yourfile.png"
+// TO ADD YOUR OWN ART: drop a picture (transparent background works best)
+// into assets/bins/ and set image: "assets/bins/yourfile.webp"
+// Keep files small so the game loads fast online: max 240x240px, and
+// WebP is ~10x smaller than PNG (see "Image sizes" in README.md).
 // "label" has one entry per language (see section 6).
 const BIN_TYPES = [
-  { id: "plastic", label: { mk: "Пластика", en: "Plastic" }, color: "#2f9df4", image: "assets/bins/plastic.png" },
-  { id: "glass", label: { mk: "Стакло", en: "Glass" }, color: "#2ecc71", image: "assets/bins/glass.png" },
-  { id: "metal", label: { mk: "Метал", en: "Metal" }, color: "#9aa5b1", image: "assets/bins/metal.png" },
-  { id: "paper", label: { mk: "Хартија", en: "Paper" }, color: "#f5a623", image: "assets/bins/paper.png" },
-  { id: "organic", label: { mk: "Органски", en: "Organic" }, color: "#8d5524", image: "assets/bins/organic.png" },
+  { id: "plastic", label: { mk: "Пластика", en: "Plastic" }, color: "#2f9df4", image: "assets/bins/plastic.webp" },
+  { id: "glass", label: { mk: "Стакло", en: "Glass" }, color: "#2ecc71", image: "assets/bins/glass.webp" },
+  { id: "metal", label: { mk: "Метал", en: "Metal" }, color: "#9aa5b1", image: "assets/bins/metal.webp" },
+  { id: "paper", label: { mk: "Хартија", en: "Paper" }, color: "#f5a623", image: "assets/bins/paper.webp" },
+  { id: "organic", label: { mk: "Органски", en: "Organic" }, color: "#8d5524", image: "assets/bins/organic.webp" },
 ];
 
 // ---------- 2. GARBAGE ITEMS ----------
 // Each item needs: name (one entry per language, see section 6),
 // type (must match a BIN_TYPES id), and either
 //   - emoji: any emoji character (quick, no files needed), or
-//   - image: a path to a picture, e.g. "assets/items/bottle.png"
+//   - image: a path to a picture, e.g. "assets/items/bottle.webp"
 // If "image" is set it is used instead of the emoji.
-// TO ADD YOUR OWN ART: drop a PNG (transparent background works best,
-// ~200x200px) into assets/items/ and set image: "assets/items/yourfile.png"
+// TO ADD YOUR OWN ART: drop a picture (transparent background works best)
+// into assets/items/ and set image: "assets/items/yourfile.webp"
+// Keep files small so the game loads fast online: max 240x240px, and
+// WebP is ~10x smaller than PNG (see "Image sizes" in README.md).
 const ITEMS = [
   // Tip: two items may share an emoji only if they go in the SAME bin,
   // otherwise kids can't tell which bin is right from the picture.
 
   // --- Plastic (9) ---
-  { name: { mk: "Пластично шише", en: "Plastic Bottle" }, type: "plastic", emoji: "🧴", image:"assets/items/plastic_bottle.png" },
-  { name: { mk: "Пластична кеса", en: "Plastic Bag" }, type: "plastic", emoji: "🛍️", image: "assets/items/plastic_bag.png" },
-  { name: { mk: "Чаша од јогурт", en: "Yogurt Cup" }, type: "plastic", emoji: "🥤", image: "assets/items/yogurt_cup.png" },
-  { name: { mk: "Сламка", en: "Drinking Straw" }, type: "plastic", emoji: "🥤", image: "assets/items/straws.png" },
-  { name: { mk: "Шише од шампон", en: "Shampoo Bottle" }, type: "plastic", emoji: "🧴", image: "assets/items/shampoo_bottle.png" },
-  { name: { mk: "Пластична чаша", en: "Plastic Cup" }, type: "plastic", emoji: "🥤", image: "assets/items/plastic_cup.png" },
-  { name: { mk: "Пластична кофа", en: "Plastic Bucket" }, type: "plastic", emoji: "🪣", image: "assets/items/plastic_bucket.png" },
-  { name: { mk: "Капаче од шише", en: "Bottle Cap" }, type: "plastic", emoji: "🔘", image: "assets/items/bottle_cap.png" },
-  { name: { mk: "Шише од детергент", en: "Detergent Bottle" }, type: "plastic", emoji: "🧴", image: "assets/items/detergent_bottle.png" },
+  { name: { mk: "Пластично шише", en: "Plastic Bottle" }, type: "plastic", emoji: "🧴", image:"assets/items/plastic_bottle.webp" },
+  { name: { mk: "Пластична кеса", en: "Plastic Bag" }, type: "plastic", emoji: "🛍️", image: "assets/items/plastic_bag.webp" },
+  { name: { mk: "Чаша од јогурт", en: "Yogurt Cup" }, type: "plastic", emoji: "🥤", image: "assets/items/yogurt_cup.webp" },
+  { name: { mk: "Сламка", en: "Drinking Straw" }, type: "plastic", emoji: "🥤", image: "assets/items/straws.webp" },
+  { name: { mk: "Шише од шампон", en: "Shampoo Bottle" }, type: "plastic", emoji: "🧴", image: "assets/items/shampoo_bottle.webp" },
+  { name: { mk: "Пластична чаша", en: "Plastic Cup" }, type: "plastic", emoji: "🥤", image: "assets/items/plastic_cup.webp" },
+  { name: { mk: "Пластична кофа", en: "Plastic Bucket" }, type: "plastic", emoji: "🪣", image: "assets/items/plastic_bucket.webp" },
+  { name: { mk: "Капаче од шише", en: "Bottle Cap" }, type: "plastic", emoji: "🔘", image: "assets/items/bottle_cap.webp" },
+  { name: { mk: "Шише од детергент", en: "Detergent Bottle" }, type: "plastic", emoji: "🧴", image: "assets/items/detergent_bottle.webp" },
 
   // --- Glass (9) ---
   // Only glass packaging (bottles & jars). Drinking glasses, bowls, vases,
   // mirrors and light bulbs are made differently and don't belong here.
-  { name: { mk: "Стаклена тегла", en: "Glass Jar" }, type: "glass", emoji: "🫙", image: "assets/items/glass_jar.png" },
-  { name: { mk: "Стаклено шише", en: "Glass Bottle" }, type: "glass", emoji: "🫗", image: "assets/items/glass_bottle.png" },
-  { name: { mk: "Шишенце од парфем", en: "Perfume Bottle" }, type: "glass", emoji: "🫙", image: "assets/items/perfume_bottle.png" },
-  { name: { mk: "Тегла од џем", en: "Jam Jar" }, type: "glass", emoji: "🫙", image: "assets/items/jam_jar.png" },
-  { name: { mk: "Тегла од кисели краставички", en: "Pickle Jar" }, type: "glass", emoji: "🫙", image: "assets/items/pickle_jar.png" },
-  { name: { mk: "Тегла од мед", en: "Honey Jar" }, type: "glass", emoji: "🍯", image: "assets/items/honey_jar.png" },
-  { name: { mk: "Шише од сок", en: "Juice Bottle" }, type: "glass", emoji: "🧃", image: "assets/items/juice_bottle.png" },
-  { name: { mk: "Скршено шише", en: "Broken Glass Bottle" }, type: "glass", emoji: "🫙", image: "assets/items/broken_glass.png" },
+  { name: { mk: "Стаклена тегла", en: "Glass Jar" }, type: "glass", emoji: "🫙", image: "assets/items/glass_jar.webp" },
+  { name: { mk: "Стаклено шише", en: "Glass Bottle" }, type: "glass", emoji: "🫗", image: "assets/items/glass_bottle.webp" },
+  { name: { mk: "Шишенце од парфем", en: "Perfume Bottle" }, type: "glass", emoji: "🫙", image: "assets/items/perfume_bottle.webp" },
+  { name: { mk: "Тегла од џем", en: "Jam Jar" }, type: "glass", emoji: "🫙", image: "assets/items/jam_jar.webp" },
+  { name: { mk: "Тегла од кисели краставички", en: "Pickle Jar" }, type: "glass", emoji: "🫙", image: "assets/items/pickle_jar.webp" },
+  { name: { mk: "Тегла од мед", en: "Honey Jar" }, type: "glass", emoji: "🍯", image: "assets/items/honey_jar.webp" },
+  { name: { mk: "Шише од сок", en: "Juice Bottle" }, type: "glass", emoji: "🧃", image: "assets/items/juice_bottle.webp" },
+  { name: { mk: "Скршено шише", en: "Broken Glass Bottle" }, type: "glass", emoji: "🫙", image: "assets/items/broken_glass.webp" },
 
   // --- Metal (7) ---
-  { name: { mk: "Лименка од сок", en: "Soda Can" }, type: "metal", emoji: "🥫", image: "assets/items/can_transparent_final.png" },
-  { name: { mk: "Конзерва", en: "Tin Can" }, type: "metal", emoji: "🥫", image: "assets/items/food_can.png" },
-  { name: { mk: "Алуминиумска фолија", en: "Aluminum Foil" }, type: "metal", emoji: "🔩", image: "assets/items/aluminum_foil.png" },
-  { name: { mk: "Метална лажица", en: "Metal Spoon" }, type: "metal", emoji: "🥄", image: "assets/items/metal_spoon.png" },
-  { name: { mk: "Шајка", en: "Nail" }, type: "metal", emoji: "🔩", image: "assets/items/nail.png" },
-  { name: { mk: "Стари клучеви", en: "Old Keys" }, type: "metal", emoji: "🔑", image: "assets/items/old_keys.png" },
-  { name: { mk: "Безбедносна игла", en: "Safety Pin" }, type: "metal", emoji: "🧷", image: "assets/items/safety_pin.png" },
+  { name: { mk: "Лименка од сок", en: "Soda Can" }, type: "metal", emoji: "🥫", image: "assets/items/can_transparent_final.webp" },
+  { name: { mk: "Конзерва", en: "Tin Can" }, type: "metal", emoji: "🥫", image: "assets/items/food_can.webp" },
+  { name: { mk: "Алуминиумска фолија", en: "Aluminum Foil" }, type: "metal", emoji: "🔩", image: "assets/items/aluminum_foil.webp" },
+  { name: { mk: "Метална лажица", en: "Metal Spoon" }, type: "metal", emoji: "🥄", image: "assets/items/metal_spoon.webp" },
+  { name: { mk: "Шајка", en: "Nail" }, type: "metal", emoji: "🔩", image: "assets/items/nail.webp" },
+  { name: { mk: "Стари клучеви", en: "Old Keys" }, type: "metal", emoji: "🔑", image: "assets/items/old_keys.webp" },
+  { name: { mk: "Безбедносна игла", en: "Safety Pin" }, type: "metal", emoji: "🧷", image: "assets/items/safety_pin.webp" },
 
   // --- Paper (9) ---
-  { name: { mk: "Млеко во картон", en: "Milk carton" }, type: "paper", emoji: "📰", image: "assets/items/milk_carton.png" },
-  { name: { mk: "Картонска кутија", en: "Cardboard Box" }, type: "paper", emoji: "📦", image: "assets/items/cardboard_box.png" },
-  { name: { mk: "Кутија за храна", en: "Food box" }, type: "paper", emoji: "📦", image: "assets/items/food_box.png" },
-  { name: { mk: "Хартија за печатење", en: "Printer Paper" }, type: "paper", emoji: "📄", image: "assets/items/printer_paper.png" },
-  { name: { mk: "Плико", en: "Envelope" }, type: "paper", emoji: "✉️", image: "assets/items/envelope.png" },
-  { name: { mk: "Кутија за јајца", en: "Egg Carton" }, type: "paper", emoji: "📦", image: "assets/items/egg_carton.png" },
-  { name: { mk: "Ролна од тоалетна хартија", en: "Toilet Paper Roll" }, type: "paper", emoji: "🧻", image: "assets/items/toilet_paper_roll.png" },
+  { name: { mk: "Млеко во картон", en: "Milk carton" }, type: "paper", emoji: "📰", image: "assets/items/milk_carton.webp" },
+  { name: { mk: "Картонска кутија", en: "Cardboard Box" }, type: "paper", emoji: "📦", image: "assets/items/cardboard_box.webp" },
+  { name: { mk: "Кутија за храна", en: "Food box" }, type: "paper", emoji: "📦", image: "assets/items/food_box.webp" },
+  { name: { mk: "Хартија за печатење", en: "Printer Paper" }, type: "paper", emoji: "📄", image: "assets/items/printer_paper.webp" },
+  { name: { mk: "Плико", en: "Envelope" }, type: "paper", emoji: "✉️", image: "assets/items/envelope.webp" },
+  { name: { mk: "Кутија за јајца", en: "Egg Carton" }, type: "paper", emoji: "📦", image: "assets/items/egg_carton.webp" },
+  { name: { mk: "Ролна од тоалетна хартија", en: "Toilet Paper Roll" }, type: "paper", emoji: "🧻", image: "assets/items/toilet_paper_roll.webp" },
 
   // --- Organic (9) ---
-  { name: { mk: "Кора од банана", en: "Banana Peel" }, type: "organic", emoji: "🍌", image: "assets/items/banana_peel.png" },
-  { name: { mk: "Огризок од јаболко", en: "Apple Core" }, type: "organic", emoji: "🍎", image: "assets/items/apple_core.png" },
-  { name: { mk: "Остатоци од храна", en: "Leftover Food" }, type: "organic", emoji: "🍕", image: "assets/items/leftover_food.png" },
-  { name: { mk: "Кора од портокал", en: "Orange Peel" }, type: "organic", emoji: "🍊", image: "assets/items/orange_peel.png" },
-  { name: { mk: "Лушпи од јајца", en: "Eggshells" }, type: "organic", emoji: "🥚", image: "assets/items/eggshells.png" },
-  { name: { mk: "Лушпи од морков", en: "Carrot Peels" }, type: "organic", emoji: "🥕", image: "assets/items/carrot_peels.png" },
-  { name: { mk: "Кора од лубеница", en: "Watermelon bark" }, type: "organic", emoji: "☕", image: "assets/items/watermelon_bark.png" },
-  { name: { mk: "Лушпа од кромид", en: "Onion skin" }, type: "organic", emoji: "🍞", image: "assets/items/onion_skin.png" },
-  { name: { mk: "Искосена трева", en: "Grass Clippings" }, type: "organic", emoji: "🌱", image: "assets/items/grass_clippings.png" },
+  { name: { mk: "Кора од банана", en: "Banana Peel" }, type: "organic", emoji: "🍌", image: "assets/items/banana_peel.webp" },
+  { name: { mk: "Огризок од јаболко", en: "Apple Core" }, type: "organic", emoji: "🍎", image: "assets/items/apple_core.webp" },
+  { name: { mk: "Остатоци од храна", en: "Leftover Food" }, type: "organic", emoji: "🍕", image: "assets/items/leftover_food.webp" },
+  { name: { mk: "Кора од портокал", en: "Orange Peel" }, type: "organic", emoji: "🍊", image: "assets/items/orange_peel.webp" },
+  { name: { mk: "Лушпи од јајца", en: "Eggshells" }, type: "organic", emoji: "🥚", image: "assets/items/eggshells.webp" },
+  { name: { mk: "Лушпи од морков", en: "Carrot Peels" }, type: "organic", emoji: "🥕", image: "assets/items/carrot_peels.webp" },
+  { name: { mk: "Кора од лубеница", en: "Watermelon bark" }, type: "organic", emoji: "☕", image: "assets/items/watermelon_bark.webp" },
+  { name: { mk: "Лушпа од кромид", en: "Onion skin" }, type: "organic", emoji: "🍞", image: "assets/items/onion_skin.webp" },
+  { name: { mk: "Искосена трева", en: "Grass Clippings" }, type: "organic", emoji: "🌱", image: "assets/items/grass_clippings.webp" },
 ];
 
 // ---------- 3. LIVES ----------

@@ -46,6 +46,20 @@ any emoji) or an `image` path.
 
 When `image` is set it's used instead of the emoji automatically.
 
+#### Image sizes
+Big images make the game slow to load online (e.g. on GitHub Pages).
+Items are shown at most 120px wide, so 240px (sharp on retina screens)
+is plenty. Convert each new PNG to a small WebP and point `image` at
+the `.webp` file. With [ImageMagick](https://imagemagick.org) and
+`cwebp` (`brew install imagemagick webp`), run from `assets/items/`:
+
+```
+magick bottle.png -resize '240x240>' -strip /tmp/x.png && cwebp -q 85 -alpha_q 100 /tmp/x.png -o bottle.webp
+```
+
+The original PNGs are kept next to the `.webp` files; only the `.webp`
+files are loaded by the game.
+
 ### 3. Change the bins/categories
 Edit `BIN_TYPES` — add, remove, rename, or recolor a bin. If you add a
 new bin id, give it enough items of that `type`; levels pick their bins

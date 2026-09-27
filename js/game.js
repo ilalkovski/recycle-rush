@@ -618,6 +618,17 @@ if (DEBUG) {
   el.debugBackBtn.addEventListener("click", () => showScreen("start"));
 }
 
+// Starts downloading every item and bin image in the background, so they
+// are already cached when an item first appears mid-level (instead of
+// popping in late). The list is kept so the browser can't drop them.
+const preloadedImages = [...ITEMS, ...BIN_TYPES]
+  .filter((entry) => entry.image)
+  .map((entry) => {
+    const img = new Image();
+    img.src = entry.image;
+    return img;
+  });
+
 renderLevelSelect();
 renderBestScore();
 applyLanguage(); // also renders the legend and the mute button
