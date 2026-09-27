@@ -81,7 +81,7 @@ const ITEMS = [
   { name: { mk: "Ролна од тоалетна хартија", en: "Toilet Paper Roll" }, type: "paper", emoji: "🧻", image: null },
 
   // --- Organic (9) ---
-  { name: { mk: "Кора од банана", en: "Banana Peel" }, type: "organic", emoji: "🍌", image: null },
+  { name: { mk: "Кора од банана", en: "Banana Peel" }, type: "organic", emoji: "🍌", image: "assets/items/banana_peel.png" },
   { name: { mk: "Огризок од јаболко", en: "Apple Core" }, type: "organic", emoji: "🍎", image: null },
   { name: { mk: "Остатоци од храна", en: "Leftover Food" }, type: "organic", emoji: "🍕", image: null },
   { name: { mk: "Кора од портокал", en: "Orange Peel" }, type: "organic", emoji: "🍊", image: null },
@@ -217,3 +217,13 @@ const TEXT = {
     unmute: "Unmute sound",
   },
 };
+// ---------- 7. DEBUG ----------
+// A "🐞 All items" button on the start screen opens a gallery of every
+// garbage item with its picture and name, to check how they look.
+// It only shows up while developing: when the game is opened from a
+// local file, localhost / 127.0.0.1, or with ?debug in the address
+// (e.g. index.html?debug). On the published site it stays hidden.
+// Set to true to always show it, or false to never show it.
+const DEBUG = ["localhost", "127.0.0.1", ""].includes(location.hostname) ||
+  new URLSearchParams(location.search).has("debug");
+

@@ -9,6 +9,7 @@ const screens = {
   play: document.getElementById("screen-play"),
   levelEnd: document.getElementById("screen-level-end"),
   gameOver: document.getElementById("screen-game-over"),
+  debug: document.getElementById("screen-debug"),
 };
 
 const el = {
@@ -37,6 +38,10 @@ const el = {
   resumeBtn: document.getElementById("resume-btn"),
   quitBtn: document.getElementById("quit-btn"),
   langBtn: document.getElementById("lang-btn"),
+  debugBtn: document.getElementById("debug-btn"),
+  debugBackBtn: document.getElementById("debug-back-btn"),
+  debugGrid: document.getElementById("debug-grid"),
+  debugCount: document.getElementById("debug-count"),
 };
 
 // Current language. Deliberately not saved — every visit starts in DEFAULT_LANGUAGE.
@@ -223,6 +228,40 @@ function renderLevelSelect() {
       startLevel(idx);
     });
     el.levelSelect.appendChild(btn);
+  });
+}
+
+// Debug gallery: every item in ITEMS with its picture (or emoji), name
+// and bin, two per row, so the art can be checked without playing.
+function renderDebugGallery() {
+  if (!DEBUG) return;
+  el.debugCount.textContent = `${ITEMS.length} items`;
+  el.debugGrid.innerHTML = "";
+  ITEMS.forEach((item) => {
+    const bin = BIN_TYPES.find((b) => b.id === item.type);
+    const card = document.createElement("div");
+    card.className = "debug-card";
+    if (bin) card.style.setProperty("--bin-color", bin.color);
+    if (item.image) {
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = localized(item.name);
+      card.appendChild(img);
+    } else {
+      const span = document.createElement("span");
+      span.className = "item-emoji";
+      span.textContent = item.emoji;
+      card.appendChild(span);
+    }
+    const name = document.createElement("div");
+    name.className = "item-name";
+    name.textContent = localized(item.name);
+    card.appendChild(name);
+    const type = document.createElement("div");
+    type.className = "debug-type";
+    type.textContent = bin ? localized(bin.label) : `⚠️ unknown type "${item.type}"`;
+    card.appendChild(type);
+    el.debugGrid.appendChild(card);
   });
 }
 
@@ -549,6 +588,7 @@ function applyLanguage() {
   renderLevelEndTitle();
   renderLifeBonus();
   renderGameOverTitle();
+  renderDebugGallery();
 }
 
 el.langBtn.addEventListener("click", () => {
@@ -571,6 +611,12 @@ el.nextLevelBtn.addEventListener("click", () => {
 
 el.levelEndSelectBtn.addEventListener("click", goToLevelSelect);
 el.restartBtn.addEventListener("click", goToLevelSelect);
+
+if (DEBUG) {
+  el.debugBtn.hidden = false;
+  el.debugBtn.addEventListener("click", () => showScreen("debug"));
+  el.debugBackBtn.addEventListener("click", () => showScreen("start"));
+}
 
 renderLevelSelect();
 renderBestScore();

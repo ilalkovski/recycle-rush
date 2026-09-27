@@ -31,7 +31,17 @@
       <div class="best-score-label" data-i18n="bestScore">🏆 Best Score</div>
       <div id="best-score" class="best-score-value">0</div>
     </div>
+    <!-- Only shown when DEBUG is on (see js/config.js). -->
+    <button id="debug-btn" class="big-btn secondary debug-btn" hidden>🐞 All items</button>
     <footer class="hint" data-i18n="hint">10 levels &middot; 3 lives &middot; earn points for correct sorting</footer>
+  </section>
+
+  <!-- DEBUG: ALL ITEMS GALLERY (only reachable when DEBUG is on) -->
+  <section id="screen-debug" class="screen">
+    <h1>🐞 All items</h1>
+    <p id="debug-count" class="subtitle small"></p>
+    <div id="debug-grid" class="debug-grid"></div>
+    <button id="debug-back-btn" class="big-btn secondary">← Back</button>
   </section>
 
   <!-- PLAY SCREEN -->

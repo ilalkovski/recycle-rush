@@ -267,4 +267,22 @@ h1 { font-size: 28px; margin: 8px 0 4px; color: var(--brand); }
 .best-score-label { font-size: 14px; font-weight: 700; color: var(--text-muted); }
 .best-score-value { font-size: 36px; font-weight: 800; color: var(--brand); line-height: 1.2; }
 
+/* Debug gallery: every item, two per row. */
+.debug-btn { margin-top: 16px; }
+.debug-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.debug-card {
+  background: white;
+  border: 3px solid var(--bin-color, #999);
+  border-radius: 14px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.debug-card img { width: 96px; height: 96px; object-fit: contain; }
+.debug-card .item-emoji { font-size: 72px; line-height: 96px; }
+.debug-card .item-name { font-size: 15px; overflow-wrap: anywhere; }
+.debug-type { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+
 footer.hint { margin-top: auto; font-size: 12px; color: var(--text-faint); padding-top: 16px; }
